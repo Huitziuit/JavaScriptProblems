@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <title>Problem3</title>
+        <script>
+            function sum()
+            {   
+                var x =document.getElementById("x").value;
+                var n =document.getElementById("n").value;
+                var total=0;
+
+                for(var i = 0; i<=n; i++)
+                {
+                    total+=Math.pow(x,i);
+                    document.write(x+"<sup>"+i+"</sup>");
+                    if(i!=n)
+                    {
+                        document.write(" + ");
+                    }
+                }
+                document.write(" = "+total);
+            }
+
+            function hello()
+            {
+                document.write("hello");
+            }
+        </script>
+    </head>
+    <body>
+        <form action="" id="form">
+            <input type="text" id="x" placeholder="input x">
+            <input type="text" id="n" placeholder="input y">
+            
+
+            <button type="button" onclick="sum()">Enter</button> 
+        </form>
+    </body>
+</html>
