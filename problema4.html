@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <title>Problem4</title>
+        <script>
+            function num(){
+
+                var message = document.getElementById("message").value;
+                var numbers=message.split(" ");
+                var media =function(elements){
+                    var total=0;
+                    for(var i in elements)
+                    {
+                        total+=parseInt(elements[i]);
+                    }
+                    total=total/elements.length
+                    return(total);    
+                }
+
+                var vari=function(elements,media)
+                {
+                    var sum=0;
+                    for(var i in elements)
+                    {
+                        sum+=Math.pow(parseInt(elements[i])-media,2);
+                    }
+                    console.log(sum/elements.length)
+                    return sum/elements.length
+                }
+
+
+                console.log("media "+media(numbers));
+                //vari(numbers,media(numbers));
+                console.log("desviacion estandar " + Math.sqrt(vari(numbers,media(numbers))));
+            }
+
+            
+        </script>
+    </head>
+    <body>
+        <form action="" id="form">
+            <input type="text" id="message" placeholder="elements">
+            <button type="button" onclick="num()">Enter</button> 
+        </form>
+    </body>
+</html>
