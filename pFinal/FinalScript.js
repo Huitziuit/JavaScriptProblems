@@ -15,7 +15,6 @@
          f2="0"+f2;
 
         return (f+"/"+f2+"/"+this.year);
-        //return (this.day+"/"+this.month+1+"/"+this.year)
      }else{
          return(this.day+" of "+ this.months[this.month]+" of "+ this.year);
      }
